@@ -1,0 +1,11 @@
+# Open Notepad on Windows and type a message
+# Assumes German keyboard layout on target
+
+WIN+r
+DELAY 500
+TYPE firefox
+ENTER
+DELAY 1000
+TYPE Hello from the Pi Zero 2W!
+ENTER
+TYPE This is an automated keystroke test.
