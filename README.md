@@ -19,16 +19,14 @@ This adds `dtoverlay=dwc2` to `/boot/firmware/config.txt`.
 ```bash
 sudo bash gadget-setup/install-service.sh
 ```
+This installs and enables a systemd service that runs `gadget-setup.sh` at boot, creating `/dev/hidg0` (HID keyboard) and `usb0` (Ethernet). \
 gadget-setup.sh and install-service.sh both accept flags to disable individual functions:
 ```bash
 --no-ethernet   # Disable USB Ethernet (ECM)
 --no-hid        # Disable HID keyboard
 ```
-This installs and enables a systemd service that runs `gadget-setup.sh` at boot, creating `/dev/hidg0` (HID keyboard) and `usb0` (Ethernet).
 
 # HID Keystroke Payloads
-
-Workflow: write a human-readable script → compile to binary → send.
 
 ## Script format (`.txt`)
 
@@ -47,7 +45,7 @@ CTRL+SHIFT+ESC       # Multi-modifier combo
 |---------|-------------|
 | `KEY` / `MOD+KEY` | Press combo and release |
 | `TYPE <text>` | Type text character by character (layout-aware) |
-| `DELAY <ms>` | Wait N milliseconds (max 65535) |
+| `DELAY <ms>` | Wait N milliseconds |
 
 ## Keyboard layouts
 

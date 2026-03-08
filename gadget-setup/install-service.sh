@@ -59,5 +59,4 @@ echo "created $SERVICE_FILE"
 
 systemctl daemon-reload
 systemctl enable usb-gadget.service
-echo "service enabled. it will start on next boot."
-echo "to start now without rebooting, run: sudo systemctl start usb-gadget.service"
+echo "service enabled."
